@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1683917691461938}
+  m_IsPrefabAsset: 1
+--- !u!1 &1683917691461938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4659539033863598}
+  - component: {fileID: 114891243850633528}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4659539033863598
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683917691461938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114891243850633528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683917691461938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a843e683d65f54a9bff531102f12da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 3e1d1ac40ea4bee4c9958ede02fb3454, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Block
+    clip: {fileID: 8300000, guid: 0fce665ee8225db4790fb681a91eb10c, type: 3}
+    volume: 0.4
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Swap
+    clip: {fileID: 8300000, guid: af33297ed8753ce42a208e185d293771, type: 3}
+    volume: 0.363
+    pitch: 1
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ProjectileHit
+    clip: {fileID: 8300000, guid: c0de79a7def511a43af623b4d41fb53e, type: 3}
+    volume: 0.13
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Conjuration
+    clip: {fileID: 8300000, guid: 52a843252bb116944a471f05119b5ab7, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GrapplingHook
+    clip: {fileID: 8300000, guid: c0de79a7def511a43af623b4d41fb53e, type: 3}
+    volume: 0.13
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Levitation
+    clip: {fileID: 8300000, guid: dcd821b60b7a3eb4bb9a12f90f7a7ac7, type: 3}
+    volume: 0.421
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonOn
+    clip: {fileID: 8300000, guid: c1e86dce398f2bd4c9ca7955c67fdb10, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 0
+    source: {fileID: 0}
+  - name: Destruction
+    clip: {fileID: 8300000, guid: fc20b0b42d5a5c242aa79a7b9f540856, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 0
+    source: {fileID: 0}
+  - name: Spike
+    clip: {fileID: 8300000, guid: c0852f89f4c828b4598c5a11069042cb, type: 3}
+    volume: 0.421
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 0
+    source: {fileID: 0}
+  - name: GameOverTheme
+    clip: {fileID: 8300000, guid: 3e1d1ac40ea4bee4c9958ede02fb3454, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 1
+    source: {fileID: 0}
+  - name: WinTheme
+    clip: {fileID: 8300000, guid: 3e1d1ac40ea4bee4c9958ede02fb3454, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 1
+    source: {fileID: 0}
+  - name: ButtonOff
+    clip: {fileID: 8300000, guid: c0c23a56059043b43a1475d379eeed3f, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 0.796
+    loop: 0
+    source: {fileID: 0}
