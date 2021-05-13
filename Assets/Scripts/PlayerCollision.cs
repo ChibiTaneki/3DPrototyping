@@ -90,7 +90,7 @@ public class PlayerCollision : MonoBehaviour
             knightColorHealthBar = knightHealthbar.gameObject.transform.GetChild(0).gameObject.GetComponent<Image>().color = new Color(0, 0, 0, 0.18f);
         }
         //Switches to the game over screen and start the music
-        if (playerAbility.wizardHealth <= 0 || playerAbility.knightHealth <= 0 || playerAbility.thiefHealth <= 0)
+        if (playerAbility.wizardHealth <= 0 && playerAbility.knightHealth <= 0 && playerAbility.thiefHealth <= 0)
         {
             FindObjectOfType<AudioManager>().StopMusic("Theme");
             gameState.EndGame();
@@ -173,37 +173,40 @@ public class PlayerCollision : MonoBehaviour
         meshCollider = other.gameObject.GetComponent<MeshCollider>();
         if (other.gameObject.tag == "Item")
         {
-            gameObject.transform.GetChild(3).gameObject.SetActive(true);
+          //  gameObject.transform.GetChild(3).gameObject.SetActive(true);
             if (playerAbility.playerState == 1)
                 if (playerAbility.wizardHealth < maxHealth)
                 {
+                    gameObject.transform.GetChild(3).gameObject.SetActive(true);
                     playerAbility.wizardHealth = maxHealth;
                     wizardHealthbar.value = CalculateHealth(playerAbility.wizardHealth);
                     gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
                     Destroy(other.gameObject);
                 }
-                else
-                    meshCollider.isTrigger = true;
+                //else
+                //    meshCollider.isTrigger = true;
             else if (playerAbility.playerState == 2)
                 if (playerAbility.thiefHealth < maxHealth)
                 {
-                    playerAbility.thiefHealth = maxHealth;
+                        gameObject.transform.GetChild(3).gameObject.SetActive(true);
+                        playerAbility.thiefHealth = maxHealth;
                     thiefHealthbar.value = CalculateHealth(playerAbility.thiefHealth);
                     gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
                     Destroy(other.gameObject);
                 }
-                else
-                    meshCollider.isTrigger = true;
+                //else
+                //    meshCollider.isTrigger = true;
             else if (playerAbility.playerState == 3)
                 if (playerAbility.knightHealth < maxHealth+3)
                 {
+                    gameObject.transform.GetChild(3).gameObject.SetActive(true);
                     playerAbility.knightHealth = maxHealth+3;
                     knightHealthbar.value = CalculateHealth(playerAbility.knightHealth);
                     gameObject.transform.GetChild(3).gameObject.GetComponent<ParticleSystem>().Play();
                     Destroy(other.gameObject);
                 }
-                else
-                    meshCollider.isTrigger = true;
+                //else
+                //    meshCollider.isTrigger = true;
         }
       
         //player thats damage only once when he has fallen into the spikes
